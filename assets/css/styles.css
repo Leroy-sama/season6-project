@@ -1,6 +1,7 @@
 :root {
 	--clr-primary: #103535;
 	--clr-white: #fff;
+	--clr-grey: #ccc;
 	--ff-primary: "Red Hat Display", sans-serif;
 }
 
@@ -77,7 +78,7 @@ nav {
 	font-weight: 700;
 }
 
-ul,
+.navlinks,
 .auth {
 	display: none;
 }
@@ -175,7 +176,7 @@ ul,
 	display: grid;
 	justify-items: center;
 	gap: 1rem;
-	border: 1px solid #ccc;
+	border: 1px solid var(--clr-grey);
 	padding: 1rem;
 }
 
@@ -193,8 +194,115 @@ ul,
 .other {
 	display: grid;
 	gap: 1rem;
-	border: 1px solid #ccc;
+	border: 1px solid var(--clr-grey);
 	padding: 1rem;
+}
+
+.looking h2 {
+	text-align: left;
+}
+
+.looking-wrap {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	padding-block: 2rem;
+}
+
+.look {
+	border: 1px solid var(--clr-grey);
+	padding: 1rem;
+}
+
+/* Doctors */
+
+.doctors-wrap {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	padding-block: 2rem;
+}
+
+.doc {
+	display: grid;
+	gap: 1rem;
+}
+
+.doc img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
+
+/* Steps */
+
+.steps-wrap {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+	padding-block: 2rem;
+}
+
+.step {
+	display: grid;
+	justify-items: center;
+	gap: 1rem;
+}
+
+.step p {
+	text-align: center;
+}
+
+/* Best */
+
+.best-content,
+.online-content {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+}
+
+/* Reviews */
+
+.reviews {
+	padding-block: 2rem;
+}
+
+.reviews-wrap {
+	display: grid;
+	gap: 2rem;
+}
+
+.review {
+	background-color: var(--clr-grey);
+	padding: 1.5rem;
+}
+
+.review img {
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	max-width: 100px;
+}
+
+/* cta */
+
+.cta {
+	padding-block: 2rem;
+}
+
+.cta-content {
+	background-color: var(--clr-grey);
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 5rem;
+}
+
+footer {
+	padding-block: 2rem;
+}
+
+.footer-content {
+	display: grid;
+	gap: 2rem;
 }
 
 @media (min-width: 994px) {
@@ -206,5 +314,20 @@ ul,
 
 	.hero-textside > h1 {
 		font-size: 2.5rem;
+	}
+
+	.best-content,
+	.online-content,
+	.reviews-wrap {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.footer-content {
+		grid-template-columns: 1fr 1.5fr;
+	}
+
+	.links {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
